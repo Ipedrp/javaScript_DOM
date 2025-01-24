@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - onClick</title>
+</head>
+<style>
+    #box{
+        width: 200px;
+        height: 200px;
+        background-color: brown;
+        border-radius: 10px;
+        display: none;
+
+    }
+    p{
+        text-align: center;
+        color: white;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    
+</style>
+<body>
+    <h1>Trabalhando com onClick</h1>
+    <button onclick="saudacoes()">
+        Diga olá!
+    </button>
+    <button onclick="mostrarCaixa()">
+        mostrarCaixa
+    </button>
+    <div id="box" onclick="desaparecerCaixa()"> <p>toque para desaparecer</p></div>
+
+    <script>
+        function saudacoes(){
+            alert("Olá, isso é uma saudação!")
+        }
+
+        function mostrarCaixa(){
+            const box = document.getElementById("box");
+
+            box.style.display = 'block';
+        }
+        function desaparecerCaixa(){
+            const box = document.getElementById("box");
+
+            box.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

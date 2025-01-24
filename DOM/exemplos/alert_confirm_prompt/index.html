@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - alert(), prompt() and confirm()</title>
+</head>
+
+<body>
+    <h1>
+        Apareceu caixas flutuantes ?
+    </h1>
+    <script>
+        alert("Isso é um alert()");
+
+        const nome = prompt("Digite seu nome");
+        alert("Seu nome capturado no prompt() é: " + nome);
+
+        const data = confirm("Confirme que recebeu? ");
+
+        if(data){
+            alert("Você confirmou pelo confirm()");
+        } else{
+            alert("Infelizmente você não confirmou!");
+        }
+
+
+    </script>
+</body>
+</html>

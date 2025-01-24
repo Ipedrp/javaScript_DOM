@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - console</title>
+</head>
+
+<body>
+    <h1>
+        Abra o console com o "f12" ou "CTRL" + "SHIFHT" + "I".
+    </h1>
+    <script>
+        console.log("Esta é uma mensagem informativa.");
+        const valor = 42;
+        console.log("O valor é:", valor);
+
+        console.error("Algo deu errado!");
+
+        console.warn("Este é um aviso. Verifique o comportamento do código.");
+
+        console.info("O servidor iniciou na porta 3000.");
+
+        const pessoas = [
+            { nome: "Alice", idade: 25 },
+            { nome: "Bob", idade: 30 },
+        ];
+        console.table(pessoas);
+
+        console.group("Detalhes do Usuário");
+        console.log("Nome: Alice");
+        console.log("Idade: 25");
+        console.groupEnd();
+
+        console.time("Loop");
+        for (let i = 0; i < 1000000; i++) { }
+        console.timeEnd("Loop");
+
+        // console.clear();
+
+        const x = 10;
+        console.assert(x > 15, "x não é maior que 15.");
+    </script>
+</body>
+</html>

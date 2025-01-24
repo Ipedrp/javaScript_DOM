@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - querySelector and querySelectorAll</title>
+</head>
+<body>
+    <h1>Capturando elemento com querySelector e querySelectorAll</h1>
+
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero possimus labore.</p>
+
+    <span class="text">Isso é span</span>
+
+    <h5 class="text">Isso é h5</h5>
+
+    <script>
+
+        console.warn("Aqui abaixo vai mostrar os elementos capturados");
+
+        console.log("Capturado pelo querySelector no caso a classe:"); 
+
+        const elemento = document.querySelector(".text");
+
+        console.log(elemento);
+        
+
+        console.log("Capturado todas as classes com `.text` pelo querySelectorAll:"); 
+
+        const elements = document.querySelectorAll(".text");
+
+        console.log(elements);
+
+        console.log("Pegando o h5 com class .text:");
+
+        const h5TEXT = elements[2];
+        
+        console.log(h5TEXT);
+        
+        
+    </script>
+    
+</body>
+</html>

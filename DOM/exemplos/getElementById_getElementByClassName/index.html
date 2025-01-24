@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - getElementById and getElementByClassName</title>
+</head>
+<body>
+    <h1>Capturando elemento com getElementById e getElementByClassName</h1>
+    <div id="container">
+        <h1 class="title">Olá Mundo!</h1>
+        <h2 class="title">Olá Mundo 02!</h2>
+    </div>
+
+    <script>
+
+        console.warn("Aqui abaixo vai mostrar os elementos capturados");
+
+        const container = document.getElementById('container');
+
+        console.log("Capturado pelo ID:"); 
+        console.log(container);
+
+        const title = document.getElementsByClassName('title');
+        
+        console.log("Capturado pelo Class:"); 
+        console.log(title);
+    </script>
+</body>
+</html>

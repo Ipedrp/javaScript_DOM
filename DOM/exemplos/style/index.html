@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - style</title>
+</head>
+<body>
+    <h1>Trabalhando com style</h1>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+    <div id="box"></div>
+    
+    <script>
+
+        const lorem = document.getElementsByTagName('p');
+        const box = document.getElementById("box")
+
+        console.log(lorem);
+        console.log(box);
+        
+        lorem[0].style.color = "red"
+
+        box.style.width = "100px"
+        box.style.height = "100px"
+        box.style.backgroundColor = "green"
+
+    </script>
+</body>
+</html>

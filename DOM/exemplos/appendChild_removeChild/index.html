@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - AppendChild and RemoveChild</title>
+</head>
+<body>
+    <h1>Trabalhando com AppendChild e RemoveChild</h1>
+    
+    <div id="container"></div>
+
+    <script>
+        const container = document.getElementById('container');
+        
+        const subtitulo = document.createElement("h2");
+        const paragrafo = document.createElement("p");
+        const paragrafo2 = document.createElement("p");
+
+        subtitulo.innerHTML = "Subtítulo adicionado!";
+        paragrafo.innerHTML = "Esse é um parágrafo para ser mostrado no HTML!";
+        paragrafo2.innerHTML = "Esse é um parágrafo para ser mostrado no HTML 2!";
+
+        container.appendChild(subtitulo);  //adiciona o subtítulo
+        container.appendChild(paragrafo);  //adiciona o primeiro parágrafo
+        container.appendChild(paragrafo2); //adiciona o segundo parágrafo
+
+        container.removeChild(paragrafo2) //remove o segundo parágrafo
+    </script>
+</body>
+</html>

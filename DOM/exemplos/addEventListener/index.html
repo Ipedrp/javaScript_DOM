@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - addEventListener</title>
+</head>
+<body>
+    <h1>Trabalhando com addEventListener</h1>
+
+    <!-- Prevenção do envio padrão com o evento -->
+    <form id="form"">
+        <label for="age">Idade</label>
+        <input type="number" name="age" id="age" placeholder="18">
+        <button type="submit">Enviar</button>
+    </form>
+    <button id="btn">Diga olá</button>
+    <script>
+
+        const form = document.getElementById('form');
+        form.addEventListener('submit', enviar)
+
+        function enviar(e) {
+            
+            e.preventDefault();
+            // Obtém o valor do campo 'age' pelo ID
+            const age = document.getElementById('age').value;
+
+            // Verifica a idade e exibe o alerta correspondente
+            if (age > 18) {
+                alert("Maior de idade!");
+            } else {
+                alert("Menor de idade!");
+            }
+        }
+
+        // Olho jeito
+
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', function(){
+            alert("Olá, isso foi pelo addEventListener!");
+        })
+
+
+    </script>
+</body>
+</html>

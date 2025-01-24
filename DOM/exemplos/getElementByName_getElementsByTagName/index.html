@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - getElementsByName and getElementsByTagName</title>
+</head>
+<body>
+    <h1>Capturando elemento com getElementsByName e getElementsByTagName</h1>
+    <p name="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic animi aperiam illum culpa dolorem corporis tempore temporibus ipsa consequatur ab illo, beatae aspernatur repellendus autem, reprehenderit error eius, fugit dolores.</p>
+
+    <span>Hellow World!</span>
+    <span>Hellow World!</span>
+    <span>Hellow World!</span>
+    <span>Hellow World!</span>
+    <span>Hellow World!</span>
+
+    <script>
+
+        console.warn("Aqui abaixo vai mostrar os elementos capturados");
+
+        const texto = document.getElementsByName('text');
+
+        console.log("Capturado pelo Name:"); 
+
+        console.log(texto);
+
+        const span = document.getElementsByTagName('span');
+
+        console.log("Capturado pelo Tag Name:"); 
+
+        console.log(span);
+
+        console.log("Vou mudar a escrita, cor e tamanho do segundo <span> para Portugês");
+
+        span[1].innerHTML = "Olá, Mundo!";
+        span[1].style.color = "red";
+        span[1].style.fontSize = "3em";
+        
+
+    </script>
+</body>
+</html>

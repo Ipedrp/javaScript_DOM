@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - innerHTML</title>
+</head>
+<body>
+    <h1>Trabalhando com innerHTML   </h1>
+
+    <p id="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    
+    <script>
+        //Acessando o conteúdo
+        const texto = document.getElementById('text')
+        
+        //Criando um novo conteúdo
+        const content = "Olá, mundo!!!"
+
+        //Adicionando novo conteúdo
+        texto.innerHTML = content;
+    </script>
+</body>
+</html>

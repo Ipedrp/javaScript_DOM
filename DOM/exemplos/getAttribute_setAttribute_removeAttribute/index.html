@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - getAttribute, setAttribute and removeAttribute</title>
+</head>
+<body>
+    <h1>Trabalhando com getAttribute, setAttribute e removeAttribut</h1>
+
+    <img 
+    src="image/coxinhajpg.jpg" 
+    alt="Coxinha deliciosa" 
+    width="200"
+    id="coxinha"
+    >
+
+    <script>
+        const coxinhaImage = document.getElementById('coxinha');
+
+        const alt = coxinhaImage.getAttribute('alt'); //pegando o atributo do elemento.
+
+        console.log(alt) //verfificar no console o atributo do elemento.
+
+        coxinhaImage.setAttribute('width', '900') //alterar o atributo width que antes era 200 e agora passa a ser 900.
+
+        coxinhaImage.removeAttribute('width'); //remove o atributo width e agora ela tem sua largura original.
+    </script>
+    
+</body>
+</html>

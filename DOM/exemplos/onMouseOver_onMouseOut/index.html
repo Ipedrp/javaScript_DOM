@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - onMouseOver and onMouseOut</title>
+</head>
+<style>
+    #box{
+        width: 200px;
+        height: 200px;
+        background-color: brown;
+        border-radius: 10px;
+        display: none;
+        margin: 0 auto;
+
+    }
+    p{
+        text-align: center;
+        color: black;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    
+</style>
+<body>
+    <h1>Trabalhando com onMouseOver e onMouseOut</h1>
+
+    <p onmouseover="mostrarCaixa()">passe o mouse por cima</p>
+    <div id="box" onmouseout="desaparecerCaixa()"> <p>passe o mouse e depois retire para desaparecer</p></div>
+
+    <script>
+        function mostrarCaixa(){
+            const box = document.getElementById("box");
+
+            box.style.display = 'block';
+        }
+        function desaparecerCaixa(){
+            const box = document.getElementById("box");
+
+            box.style.display = 'none';
+        }
+    </script>
+</body>
+    
+
+</html>

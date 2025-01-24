@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - classList</title>
+</head>
+<style>
+    .blue{
+        color: blue;
+    }
+
+    .red{
+        color: red;
+    }
+</style>
+<body>
+    <h1>Trabalhando com classList   </h1>
+
+    <p id="text" class="texto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    
+    <script>
+        //Acessando o conteúdo
+        const texto = document.getElementById('text')
+
+        //adicionando class blue
+        texto.classList.add("blue");
+
+        //removendo class blue
+        texto.classList.remove("blue");
+
+        //removendo class texto
+        texto.classList.remove("texto");
+
+        //adicionando class red
+        texto.classList.add("red")
+
+        console.log(texto);
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - onSubmit</title>
+</head>
+<body>
+    <h1>Trabalhando com onSubmit</h1>
+
+    <!-- Prevenção do envio padrão com o evento -->
+    <form onsubmit="enviar(event)">
+        <label for="age">Idade</label>
+        <input type="number" name="age" id="age" placeholder="18">
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        function enviar(event) {
+            // Obtém o valor do campo 'age' pelo ID
+            const age = document.getElementById('age').value;
+
+            // Verifica a idade e exibe o alerta correspondente
+            if (age > 18) {
+                alert("Maior de idade!");
+            } else {
+                alert("Menor de idade!");
+            }
+        }
+    </script>
+</body>
+</html>
